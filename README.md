@@ -26,9 +26,11 @@ xgb_model.fit(x_train,y_train,eval_metric=["auc","error"],verbose=True)
 
 ### Results:
 Tuning XGBoost model gives 87.1% prediction accuracy. Following is classification report for the model performance.
+
 ![classification_report](https://user-images.githubusercontent.com/41015749/73489761-2ccda580-4379-11ea-8d91-a7e60adc09c2.jpg)
 
-We can also check which features in our data are more dominant for decision making.
+We can also check which features in our data are more dominant for decision making. It is seen that Estimated Salary is the most dominant factor to determine customer churn.
+
 ![image](https://user-images.githubusercontent.com/41015749/73489847-54247280-4379-11ea-965c-0090e21b9768.png)
 
 ### Conclusion:
