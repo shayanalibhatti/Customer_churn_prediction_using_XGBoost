@@ -25,7 +25,7 @@ xgb_model = XGBClassifier(learning_rate=0.1,base_score=0.8,max_depth=3,n_estimat
 xgb_model.fit(x_train,y_train,eval_metric=["auc","error"],verbose=True)
 
 ### Results:
-Tuning XGBoost model gives 87.1% prediction accuracy. Following is classification report for the model performance.
+Tuning XGBoost model gives 87.1% prediction accuracy. Following is classification report for the model performance. It is seen that recall for 0 (customer retained) is 97% but recall for 1 (customer exited) is 41% which is poor. The reason for that is that we have 7963 data samples for 0 (customer retained) in dataset 2037 samples for 1 (customer exitted) in dataset. Hence dataset is imbalanced. We need more samples for 1 (customers exited) so that our model does not give biased predictions. Right now it is biased in favor of 0 (customer retained).
 
 ![classification_report](https://user-images.githubusercontent.com/41015749/73489761-2ccda580-4379-11ea-8d91-a7e60adc09c2.jpg)
 
